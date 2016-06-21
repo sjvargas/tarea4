@@ -32,8 +32,8 @@ module SlackMathbot
       command 'calculate' do |client, data, _match|
        # origen1 = data.text
         destino1 = data.text
-        s = 'https://maps.googleapis.com/maps/api/distancematrix/json?origins=Santiago' + '&destinations=' + destino1[9..-1]+ '&key= AIzaSyBSIU35JErNsPB9fClZmbhah7xowIwVfno '
-        client.say(channel: data.channel, text: destino1[9..-1])
+        s = 'https://maps.googleapis.com/maps/api/distancematrix/json?origins=Santiago' + '&destinations=' + destino1[10..-1]+ '&key= AIzaSyBSIU35JErNsPB9fClZmbhah7xowIwVfno '
+        client.say(channel: data.channel, text: destino1[10..-1])
         client.say(channel: data.channel, text: s)
        # busqueda = RestClient.get s
        # busquedaJson = JSON.parse(busqueda)
