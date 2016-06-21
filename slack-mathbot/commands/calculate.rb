@@ -2,7 +2,7 @@ require 'rest-client'
 
 module SlackMathbot
   module Commands
-    class Tweets < SlackRubyBot::Commands::Base
+    class Distancia< SlackRubyBot::Commands::Base
       command 'Distancia entre:' do |client, data, _match|
         origen1 = data.text.split(­':')[1].sp­lit('-')
         destino1 = data.text.split(­':')[1].sp­lit('-') 
@@ -11,7 +11,7 @@ module SlackMathbot
         busquedaJson = JSON.parse(busqueda)
         origen = busquedaJson["origin_addresses"][0].to_s
         destino = busquedaJson["destination_addresses"][0].to_s
-        Distancia = busquedaJson['rows'][0]['elements'][0]['distance']['text'].to_s
+        distancia = busquedaJson['rows'][0]['elements'][0]['distance']['text'].to_s
         tiempo = busquedaJson['rows'][0]['elements'][0]['duration']['text'].to_s
 
         client.say(channel: data.channel, text: "Calculando distancia y tiempo")
