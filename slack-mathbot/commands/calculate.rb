@@ -2,7 +2,7 @@ require 'rest-client'
 
 module SlackMathbot
   module Commands
-    class Calculando < SlackRubyBot::Commands::Base
+    class Calculate < SlackRubyBot::Commands::Base
       command 'Distancia entre:' do |client, data, _match|
         origen1 = data.text
         destino1 = data.text
