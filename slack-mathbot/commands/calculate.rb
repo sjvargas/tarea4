@@ -33,7 +33,7 @@ module SlackMathbot
        # origen1 = data.text
         destino1 = data.text
         #s = 'https://maps.googleapis.com/maps/api/distancematrix/json?origins=' + origen1.split(­'calculate')[1].sp­lit('-')[0] + '&destinations=' + destino1.split(­'calculate')[1].sp­lit('-')[1] + '&key= AIzaSyBSIU35JErNsPB9fClZmbhah7xowIwVfno '
-        client.say(channel: data.channel, text: destino1[9..])
+        client.say(channel: data.channel, text: destino1[9..-1])
 
         #busqueda = RestClient.get s
         #busquedaJson = JSON.parse(busqueda)
