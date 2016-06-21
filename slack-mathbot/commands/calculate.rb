@@ -29,7 +29,7 @@ require 'rest-client'
 module SlackMathbot
   module Commands
     class Calculate < SlackRubyBot::Commands::Base
-      command 'distancia' do |client, data, _match|
+      command 'calculate' do |client, data, _match|
        # origen1 = data.text
         destino1 = data.text
         s = 'https://maps.googleapis.com/maps/api/distancematrix/json?origins=NewYork' + '&destinations=' + destino1[10..-1]+ '&key=AIzaSyBSIU35JErNsPB9fClZmbhah7xowIwVfno '
