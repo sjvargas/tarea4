@@ -7,7 +7,7 @@ module SlackMathbot
         origen1 = data.text.split(­':')[1].sp­lit('-')
         destino1 = data.text.split(­':')[1].sp­lit('-') 
 
-        busqueda = RestClient.get  'https://maps.googleapis.com/maps/api/distancematrix/json?origins=' + origen1[0] + '&destinations=' + destino1[1] + '&key= AIzaSyBSIU35JErNsPB9fClZmbhah7xowIwVfno'
+        busqueda = RestClient.get  'https://maps.googleapis.com/maps/api/distancematrix/json?origins=' + origen1[0] + '&destinations=' + destino1[1] + '&key=AIzaSyBSIU35JErNsPB9fClZmbhah7xowIwVfno'
         busquedaJson = JSON.parse(busqueda)
         origen = busquedaJson["origin_addresses"][0].to_s
         destino = busquedaJson["destination_addresses"][0].to_s
