@@ -41,6 +41,8 @@ gem 'celluloid-io'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rake'
+  gem 'foreman'
 
 
 end
@@ -55,3 +57,4 @@ group :development do
   gem 'spring'
 end
 
+gem 'rest-client'
